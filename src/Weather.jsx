@@ -70,7 +70,9 @@ export default function Weather() {
 
   return (
     <>
-      <div className="text-black   w-full       gap-4 pt-4   font-mono  flex-col flex h-full   ">
+      <div className={`text-black   w-full       gap-4 pt-4   font-mono  flex-col flex  ${
+          isLoading ? "h-screen" : "h-full"
+        } `}>
         <div className="xl:w-1/3    backdrop-blur-md bg-black/10  p-2 xl:rounded-tl-4xl xl:rounded-br-4xl mx-auto space-y-5 h-45 ">
           <h3 className=" text-center text-sm  ">
             Search For Weather Anywhere in the World
